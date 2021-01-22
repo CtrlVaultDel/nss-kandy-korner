@@ -1,0 +1,36 @@
+{
+    "products": [
+        {
+            "id": 1
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "address": "123 alphabet road",
+            "sqft": 2000,
+            "handicap": true
+        },
+        {
+            "id": 2,
+            "address": "456 numbers street",
+            "sqft": 2400,
+            "handicap": false
+        }
+    ],
+    "employees": [
+        {
+            "id": 1
+        }
+    ],
+    "productTypes": [
+        {
+            "id": 1
+        }
+    ],
+    "customers": [
+        {
+            "id": 1
+        }
+    ]
+}
