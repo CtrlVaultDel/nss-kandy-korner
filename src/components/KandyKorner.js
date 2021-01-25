@@ -1,6 +1,6 @@
 import React from "react";
-import { LocationList } from "./locations/LocationList.js";
 import { LocationProvider } from "./locations/LocationProvider.js";
+import { LocationList } from "./locations/LocationList.js";
 
 export const KandyKorner = () => (
   <>
