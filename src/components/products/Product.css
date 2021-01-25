@@ -1,0 +1,9 @@
+.products {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    border: solid black 1px;
+    padding: 5px;
+}
