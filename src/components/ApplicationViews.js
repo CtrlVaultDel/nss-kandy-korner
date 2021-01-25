@@ -9,6 +9,10 @@ import { Home } from "./Home";
 import { LocationProvider } from "./locations/LocationProvider.js";
 import { LocationList } from "./locations/LocationList.js";
 
+// Product Imports
+import { ProductProvider } from "./products/ProductProvider.js";
+import { ProductList } from "./products/ProductList.js"; 
+
 // Application Routing Function
 export const ApplicationViews = () => {
     return (
@@ -23,6 +27,13 @@ export const ApplicationViews = () => {
                 <LocationProvider>
                     <LocationList />
                 </LocationProvider>
+            </Route>
+
+            {/* Render the location list when http://localhost:3000/products */}
+            <Route path ="/products">
+                <ProductProvider>
+                    <ProductList />
+                </ProductProvider>
             </Route>
         </>
     );

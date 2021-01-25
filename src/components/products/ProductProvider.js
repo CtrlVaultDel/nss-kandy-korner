@@ -2,35 +2,35 @@ import React, { useState, createContext } from "react";
 
 // The context is imported and used by individual components that need data
 // createContext() makes an object with properties
-export const LocationContext = createContext();
+export const ProductContext = createContext();
 
 // This component establishes what data can be used.
-export const LocationProvider = (props) => {
-    const [locations, setLocations] = useState([])
+export const ProductProvider = (props) => {
+    const [products, setProducts] = useState([])
 
-    const getLocations = () => {
-        return fetch("http://localhost:8088/locations")
+    const getProducts = () => {
+        return fetch("http://localhost:8088/products")
         .then(res => res.json())
-        .then(setLocations);
+        .then(setProducts);
     };
 
-    const addLocation = locationObj => {
-        return fetch("http://localhost:8088/locations", {
+    const addProduct = productObj => {
+        return fetch("http://localhost:8088/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(locationObj)
+            body: JSON.stringify(productObj)
         })
-        .then(getLocations);
+        .then(getProducts);
     };
 
     // Subcomponent that renders a subset of itself called a Provider
     // Provider = Interface that other components can use in order to gain access
     // to what the provider holds.
     return (
-        <LocationContext.Provider value={{locations, getLocations, addLocation}}>
+        <ProductContext.Provider value={{products, getProducts, addProduct}}>
             {props.children}
-        </LocationContext.Provider>
+        </ProductContext.Provider>
     );
 };
