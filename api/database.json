@@ -2,15 +2,27 @@
     "products": [
         {
             "id": 1,
+            "productTypeId": 1,
+            "name": "Coke",
+            "price": 1.75
+        },
+        {
+            "id": 2,
             "productTypeId": 2,
             "name": "Hershey Bar",
             "price": 2.30
         },
         {
-            "id": 2,
-            "productTypeId": 1,
-            "name": "Coke",
-            "price": 1.75
+            "id": 3,
+            "productTypeId": 3,
+            "name": "Trident",
+            "price": 0.99
+        },
+        {
+            "id": 4,
+            "productTypeId": 4,
+            "name": "Jawbreaker",
+            "price": 2.30
         }
     ],
     "locations": [
@@ -34,11 +46,6 @@
     ],
     "productTypes": [
         {
-            "id": 1
-        }
-    ],
-    "customers": [
-        {
             "id": 1,
             "type": "sodas"
         },
@@ -53,6 +60,11 @@
         {
             "id": 4,
             "type": "hard candy"
+        }
+    ],
+    "customers": [
+        {
+            "id": 1
         }
     ]
 }

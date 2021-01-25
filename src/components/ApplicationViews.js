@@ -25,15 +25,11 @@ export const ApplicationViews = () => {
             {/* Render the location list when http://localhost:3000/locations */}
             <Route path ="/locations">
                 <LocationProvider>
-                    <LocationList />
+                    <ProductProvider>
+                        <LocationList />
+                        <ProductList />
+                    </ProductProvider>
                 </LocationProvider>
-            </Route>
-
-            {/* Render the location list when http://localhost:3000/products */}
-            <Route path ="/products">
-                <ProductProvider>
-                    <ProductList />
-                </ProductProvider>
             </Route>
         </>
     );

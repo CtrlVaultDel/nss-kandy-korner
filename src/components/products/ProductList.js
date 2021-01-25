@@ -8,6 +8,7 @@ export const ProductList = () => {
   const { products, getProducts } = useContext(ProductContext);
 
   //useEffect - reach out to the world for something
+  // eslint-disable-next-line
   useEffect(getProducts, []);
 
   return (
