@@ -11,6 +11,7 @@ import { LocationList } from "./locations/LocationList.js";
 
 // Product Imports
 import { ProductProvider } from "./products/ProductProvider.js";
+import { ProductTypeProvider } from "./products/ProductTypeProvider.js";
 import { ProductList } from "./products/ProductList.js"; 
 
 // Application Routing Function
@@ -23,14 +24,17 @@ export const ApplicationViews = () => {
             </Route>
 
             {/* Render the location list when http://localhost:3000/locations */}
-            <Route path ="/locations">
-                <LocationProvider>
-                    <ProductProvider>
-                        <LocationList />
-                        <ProductList />
-                    </ProductProvider>
-                </LocationProvider>
-            </Route>
+            
+            <LocationProvider>
+                <ProductProvider>
+                    <ProductTypeProvider>
+                        <Route path ="/locations">
+                            <LocationList />
+                            <ProductList />
+                        </Route>
+                    </ProductTypeProvider>
+                </ProductProvider>
+            </LocationProvider>
         </>
     );
 };
