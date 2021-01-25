@@ -1,0 +1,9 @@
+.locations {
+    display: flex;
+    justify-content: space-around;
+}
+
+.location {
+    border: solid black 1px;
+    padding: 5px;
+}
