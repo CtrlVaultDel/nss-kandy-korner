@@ -34,11 +34,6 @@
     ],
     "productTypes": [
         {
-            "id": 1
-        }
-    ],
-    "customers": [
-        {
             "id": 1,
             "type": "sodas"
         },
@@ -53,6 +48,11 @@
         {
             "id": 4,
             "type": "hard candy"
+        }
+    ],
+    "customers": [
+        {
+            "id": 1
         }
     ]
 }
