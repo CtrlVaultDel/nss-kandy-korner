@@ -19,6 +19,10 @@ import { EmployeeProvider } from "./employees/EmployeeProvider.js";
 import { EmployeeList } from "./employees/EmployeeList.js";
 import { EmployeeForm } from "./employees/EmployeeForm.js";
 
+// Customer Imports
+import { CustomerOrders } from "./customers/CustomerOrder.js";
+import { CustomerProductProvider } from "./customers/CustomerProductProvider.js";
+
 // Application Routing Function
 export const ApplicationViews = () => {
     return (
