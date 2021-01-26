@@ -1,70 +1,91 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "productTypeId": 1,
-            "name": "Coke",
-            "price": 1.75
-        },
-        {
-            "id": 2,
-            "productTypeId": 2,
-            "name": "Hershey Bar",
-            "price": 2.30
-        },
-        {
-            "id": 3,
-            "productTypeId": 3,
-            "name": "Trident",
-            "price": 0.99
-        },
-        {
-            "id": 4,
-            "productTypeId": 4,
-            "name": "Jawbreaker",
-            "price": 2.30
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "address": "123 alphabet road",
-            "sqft": 2000,
-            "handicap": true
-        },
-        {
-            "id": 2,
-            "address": "456 numbers street",
-            "sqft": 2400,
-            "handicap": false
-        }
-    ],
-    "employees": [
-        {
-            "id": 1
-        }
-    ],
-    "productTypes": [
-        {
-            "id": 1,
-            "type": "sodas"
-        },
-        {
-            "id": 2,
-            "type": "chocolate"
-        },
-        {
-            "id": 3,
-            "type": "gum"
-        },
-        {
-            "id": 4,
-            "type": "hard candy"
-        }
-    ],
-    "customers": [
-        {
-            "id": 1
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "productTypeId": 1,
+      "name": "Coke",
+      "price": 1.75
+    },
+    {
+      "id": 2,
+      "productTypeId": 2,
+      "name": "Hershey Bar",
+      "price": 2.3
+    },
+    {
+      "id": 3,
+      "productTypeId": 3,
+      "name": "Trident",
+      "price": 0.99
+    },
+    {
+      "id": 4,
+      "productTypeId": 4,
+      "name": "Jawbreaker",
+      "price": 2.3
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "address": "123 alphabet road",
+      "sqft": 2000,
+      "handicap": true
+    },
+    {
+      "id": 2,
+      "address": "456 numbers street",
+      "sqft": 2400,
+      "handicap": false
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Jacob Dumpsterfire",
+      "locationId": 1,
+      "manager": true,
+      "fullTime": true,
+      "hourlyRate": 20
+    },
+    {
+      "id": 2,
+      "name": "Yeetie Flabberghast",
+      "locationId": 1,
+      "manager": false,
+      "fullTime": true,
+      "hourlyRate": 12
+    },
+    {
+      "id": 3,
+      "name": "Sir Monnacle McSlam",
+      "locationId": 2,
+      "manager": true,
+      "fullTime": true,
+      "hourlyRate": 21
+    }
+  ],
+  "productTypes": [
+    {
+      "id": 1,
+      "type": "sodas"
+    },
+    {
+      "id": 2,
+      "type": "chocolate"
+    },
+    {
+      "id": 3,
+      "type": "gum"
+    },
+    {
+      "id": 4,
+      "type": "hard candy"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1
+    }
+  ]
 }

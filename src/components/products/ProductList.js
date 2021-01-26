@@ -15,8 +15,6 @@ export const ProductList = () => {
   useEffect(() => {
     getProductTypes()
     .then(getProducts)
-    console.log(productTypes)
-    console.log(products)
   }, []);
 
   return (
