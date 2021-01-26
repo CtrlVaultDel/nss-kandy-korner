@@ -85,7 +85,9 @@
   ],
   "customers": [
     {
-      "id": 1
+      "id": 1,
+      "name": "George Bakingsoda",
+      "email": "bakersville@comcast.net"
     }
   ]
 }
