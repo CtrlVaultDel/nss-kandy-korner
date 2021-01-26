@@ -1,0 +1,9 @@
+.employees {
+    display: flex;
+    justify-content: space-around;
+}
+
+.employee {
+    border: solid black 1px;
+    padding: 5px;
+}

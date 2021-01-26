@@ -14,6 +14,11 @@ import { ProductProvider } from "./products/ProductProvider.js";
 import { ProductTypeProvider } from "./products/ProductTypeProvider.js";
 import { ProductList } from "./products/ProductList.js"; 
 
+// Employee Imports
+import { EmployeeProvider } from "./employees/EmployeeProvider.js";
+import { EmployeeList } from "./employees/EmployeeList.js";
+import { EmployeeForm } from "./employees/EmployeeForm.js";
+
 // Application Routing Function
 export const ApplicationViews = () => {
     return (
@@ -28,13 +33,25 @@ export const ApplicationViews = () => {
             <LocationProvider>
                 <ProductProvider>
                     <ProductTypeProvider>
-                        <Route path ="/locations">
+                        <Route exact path="/locations">
                             <LocationList />
                             <ProductList />
                         </Route>
                     </ProductTypeProvider>
                 </ProductProvider>
             </LocationProvider>
+
+            <EmployeeProvider>
+                <Route exact path="/employees">
+                    <EmployeeList />
+                </Route>
+                
+                <LocationProvider>
+                    <Route exact path="/employees/create">
+                        <EmployeeForm />
+                    </Route>
+                </LocationProvider>
+            </EmployeeProvider>
         </>
     );
 };
