@@ -39,7 +39,9 @@ export const ApplicationViews = () => {
                     <ProductTypeProvider>
                         <Route exact path="/locations">
                             <LocationList />
-                            <ProductList />
+                            <CustomerProductProvider>
+                                <ProductList />
+                            </CustomerProductProvider>
                         </Route>
                     </ProductTypeProvider>
                 </ProductProvider>
