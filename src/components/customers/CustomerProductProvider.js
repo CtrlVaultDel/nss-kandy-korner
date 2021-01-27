@@ -9,7 +9,7 @@ export const CustomerProductProvider = (props) => {
     const [customerProducts, setCustomerProducts] = useState([]);
 
     const getCustomerProducts = () => {
-        return fetch("http://localhost:8088/customerProducts")
+        return fetch("http://localhost:8088/customerProducts?")
         .then(res => res.json())
         .then(setCustomerProducts);
     };
@@ -25,11 +25,22 @@ export const CustomerProductProvider = (props) => {
         .then(getCustomerProducts);
     };
 
+    const updateCustomerProduct = customerProduct => {
+        return fetch(`http://localhost:8088/customerProducts/${customerProduct.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(customerProduct)
+        })
+          .then(getCustomerProducts)
+      };
+
     // Subcomponent that renders a subset of itself called a Provider
     // Provider = Interface that other components can use in order to gain access
     // to what the provider holds.
     return (
-        <CustomerProductContext.Provider value={{customerProducts, getCustomerProducts, addCustomerProduct}}>
+        <CustomerProductContext.Provider value={{customerProducts, getCustomerProducts, addCustomerProduct, updateCustomerProduct}}>
             {props.children}
         </CustomerProductContext.Provider>
     );

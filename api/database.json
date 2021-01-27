@@ -92,9 +92,10 @@
   ],
   "customerProducts": [
     {
-      "id": 1,
       "customerId": 1,
-      "productId": 1
+      "productId": 1,
+      "quantity": 1,
+      "id": 1
     }
   ]
 }
