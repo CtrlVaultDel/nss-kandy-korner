@@ -4,32 +4,34 @@ import { CustomerProductContext } from "../customers/CustomerProductProvider.js"
 export const ProductCard = ({product, productType}) => {
     const { customerProducts, addCustomerProduct, getCustomerProducts, updateCustomerProduct } = useContext(CustomerProductContext);
 
-    const addOrder = (productId) => {
+    const addOrder = (itemId) => {
         const customerId = parseInt(localStorage.getItem("kandykorner_customer"));
+        const productId = itemId;
         let id = 0;
         let quantity = 1;
         getCustomerProducts()
         .then(() => {
-            const foundMatch = customerProducts.some((relation) => {
-                if(relation.customerId === customerId && relation.productId === productId) {
-                    id = relation.id;
-                    quantity = relation.quantity + 1;
+            if(customerProducts.some((relation) => relation.customerId === customerId && relation.productId === productId)){
+                console.log("Updating existing order")
+                const existingOrder = customerProducts.find((relation) => relation.customerId === customerId && relation.productId === productId)
+                    id = existingOrder.id;
+                    quantity = existingOrder.quantity + 1;
+                    console.log(existingOrder);
                     updateCustomerProduct({
                         customerId,
                         productId,
                         quantity,
                         id
                     })
-                }
-            });
-            if (!foundMatch){
+            } else {
                 console.log("Going to have to make a new one")
+                console.log(customerId, productId, quantity)
                 addCustomerProduct({
                     customerId,
                     productId,
                     quantity
                 });
-            }
+            };       
         });
     };
     
