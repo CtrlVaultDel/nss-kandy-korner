@@ -20,8 +20,9 @@ import { EmployeeList } from "./employees/EmployeeList.js";
 import { EmployeeForm } from "./employees/EmployeeForm.js";
 
 // Customer Imports
-import { CustomerOrders } from "./customers/CustomerOrder.js";
+import { CustomerOrderList } from "./customers/CustomerOrderList.js";
 import { CustomerProductProvider } from "./customers/CustomerProductProvider.js";
+import { CustomerProvider } from "./customers/CustomerProvider";
 
 // Application Routing Function
 export const ApplicationViews = () => {
@@ -58,6 +59,16 @@ export const ApplicationViews = () => {
                     </Route>
                 </LocationProvider>
             </EmployeeProvider>
+
+            <CustomerProductProvider>
+                <CustomerProvider>
+                    <ProductProvider>
+                        <Route exact path="/customerOrderList/:customerId(\d+)">
+                            <CustomerOrderList />
+                        </Route> 
+                    </ProductProvider>
+                </CustomerProvider>
+            </CustomerProductProvider>
         </>
     );
 };

@@ -18,7 +18,8 @@ export const EmployeeForm = () => {
 
     const history = useHistory();
 
-    useEffect(getLocations,[]);
+     // eslint-disable-next-line
+    useEffect(getLocations, []);
 
     const handleControlledInputChange = (event) => {
         const newEmployee = {...employee};

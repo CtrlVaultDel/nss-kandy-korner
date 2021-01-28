@@ -15,7 +15,9 @@ export const ProductList = () => {
   useEffect(() => {
     getProductTypes()
     .then(getProducts)
-  }, []);
+  }, 
+   // eslint-disable-next-line
+   []);
 
   return (
     <>

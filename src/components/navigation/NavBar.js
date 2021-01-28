@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 export const NavBar = (props) => {
+    const customerId = parseInt(localStorage.getItem("kandykorner_customer"))
     return (
         <ul className="navbar">
             <li className="navbar__item active">
@@ -15,7 +16,7 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/employees">Employees</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/customerOrder">My Order</Link>
+                <Link className="navbar__link" to={`/customerOrderList/${customerId}`}>My Order</Link>
             </li>
         </ul>
     );

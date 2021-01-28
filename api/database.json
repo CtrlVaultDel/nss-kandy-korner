@@ -96,6 +96,12 @@
       "productId": 1,
       "quantity": 1,
       "id": 1
+    },
+    {
+      "customerId": 1,
+      "productId": 2,
+      "quantity": 3,
+      "id": 2
     }
   ]
 }
